@@ -1,12 +1,16 @@
-<div align="center">
-  <img src="AIUBP+ Chromium/icons/white.png" width="100" alt="AIUB Portal+ Logo">
-  <h1>AIUB Portal+</h1>
-  <p><i>The ultimate productivity companion for AIUB students.</i></p>
+<table width="100%">
+  <tr>
+    <td align="left">
+      <img src="AIUBP+ Chromium/icons/white.png" width="60" style="vertical-align: middle;">
+      <h1 style="display: inline; vertical-align: middle; margin-left: 10px;">AIUB Portal+</h1>
+    </td>
+    <td align="right" valign="middle">
+      <a href="https://github.com/sakibmahmudsadi/AIUB_Portal_plus/releases"><img src="https://img.shields.io/badge/version-1.5.0-blue?style=for-the-badge" alt="Version"></a><br>
+      <img src="https://img.shields.io/badge/platform-Chrome%20%7C%20Firefox-orange?style=for-the-badge" alt="Platform">
+    </td>
+  </tr>
+</table>
 
-  [![Version](https://img.shields.io/badge/version-1.5.0-blue?style=for-the-badge)](https://github.com/sakibmahmudsadi/AIUB_Portal_plus/releases)
-  [![Platform](https://img.shields.io/badge/platform-Chrome%20%7C%20Firefox-orange?style=for-the-badge)](#)
-  [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](#)
-</div>
 
 ---
 
