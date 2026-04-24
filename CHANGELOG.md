@@ -8,6 +8,7 @@ All notable changes to the AIUB Portal+ extension will be documented in this fil
 - **Self-Healing Captcha:** Added strict validation (0-100) and auto-refresh logic if OCR hallucinates unrealistic math results.
 - **New API Key:** Updated default fallback OCR API key for better reliability.
 - **UI Polish:** Changed "Saved" status message color to AIUB Blue to match the portal's aesthetic.
+- **Documentation:** Integrated an embedded video installation guide directly into the README.
 
 ### Changed
 - Updated default extension icons to the white version for better dark mode visibility.
