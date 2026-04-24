@@ -5,7 +5,11 @@
 <h1 align="center">AIUB Portal+</h1>
 
 <p align="center">
-  AIUB Portal+ is a minimalist browser extension designed to eliminate the friction of daily portal logins. No more manual captcha solving or clicking "Login" repeatedly.
+  AIUB Portal+ is a minimalist browser extension to get rid of annoying captchas.
+
+  **How to use:** Install > Set API & Enjoy. Reload Captcha or portal if it's not working.
+
+  **বাংলায়:** ভাই শুধু নামান আর api set করেন, বাকীকাজ ও নিজেই করবে। যদি কোন      সমস্যা হয় পেজ captcha refresh দিয়েন। তাও না হলে page refresh দিয়েন। 
 </p>
 
 ---
@@ -42,9 +46,15 @@
 1. Install from the [Official Firefox Add-ons Store](https://addons.mozilla.org/en-US/firefox/addon/aiub_portal_plus/).
 
 ---
-
 ### 🎥 Visual Guides
-* [Watch Installation Video](assets/video.mp4)
+<p align="center">
+  <video width="100%" controls poster="assets/ss1.jpg">
+    <source src="assets/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <br>
+  <a href="assets/video.mp4">📂 Download or Watch Video Directly</a>
+</p>
 
 ---
 
