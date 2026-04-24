@@ -9,7 +9,7 @@
 
   **How to use:** Install > Set API & Enjoy. Reload Captcha or portal if it's not working.
 
-  **বাংলায়:** ভাই শুধু নামান আর api set করেন, বাকীকাজ ও নিজেই করবে। যদি কোন      সমস্যা হয় পেজ captcha refresh দিয়েন। তাও না হলে page refresh দিয়েন। 
+  **বাংলায়:** ভাই শুধু নামান আর api set করেন, বাকীকাজ ও নিজেই করবে। যদি কোন      সমস্যা হয় captcha refresh দিয়েন। তাও না হলে page refresh দিয়েন। 
 </p>
 
 ---
