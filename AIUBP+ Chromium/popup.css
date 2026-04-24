@@ -1,0 +1,421 @@
+/* ─────────────────────────────────────────────────────────
+   AIUB Portal+ Extension Popup — Ultra-Minimalist Redesign
+   Default: Light. Toggle adds class="dark" on <body>.
+───────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Tokens: Minimalist Vercel-inspired ──────────── */
+:root {
+  --bg: #ffffff;
+
+  --title: #000000;
+  --plus: #000000;
+  --sub: #000000;
+
+  --logo-bg: #467da6;
+  --logo-text: #ffffff;
+
+  --divider: #d1d5db;
+
+  --lbl: #000000;
+
+  --field-bg: #ffffff;
+  --field-border: #d1d5db;
+  --field-focus: #467da6;
+  --field-ring: rgba(70, 125, 166, 0.2);
+  --field-text: #000000;
+  --placeholder: #000000;
+  --key-idle: #000000;
+  --key-focus: #000000;
+
+  --save-bg: #000000;
+  --save-text: #ffffff;
+  --save-hover: #1f2937;
+
+  --ver: #000000;
+
+  --gh-bg: #ffffff;
+  --gh-border: #d1d5db;
+  --gh-text: #000000;
+  --gh-hover-bg: #f3f4f6;
+
+  --toggle-bg: #ffffff;
+  --toggle-bd: #d1d5db;
+  --toggle-icon: #000000;
+  --toggle-hover: #f3f4f6;
+
+  --link-color: #000000;
+  --link-hover: #000000;
+}
+
+body.dark {
+  --bg: #09090b;
+
+  --title: #ffffff;
+  --plus: #ffffff;
+  --sub: #e4e4e7;
+
+  --logo-bg: #ffffff;
+  --logo-text: #000000;
+
+  --divider: #3f3f46;
+
+  --lbl: #e4e4e7;
+
+  --field-bg: #18181b;
+  --field-border: #3f3f46;
+  --field-focus: #ffffff;
+  --field-ring: rgba(255, 255, 255, 0.3);
+  --field-text: #ffffff;
+  --placeholder: #a1a1aa;
+  --key-idle: #a1a1aa;
+  --key-focus: #ffffff;
+
+  --save-bg: #ffffff;
+  --save-text: #000000;
+  --save-hover: #e4e4e7;
+
+  --ver: #a1a1aa;
+
+  --gh-bg: #27272a;
+  --gh-border: #3f3f46;
+  --gh-text: #a1a1aa;
+  --gh-hover-bg: #27272a;
+
+  --toggle-bg: #18181b;
+  --toggle-bd: #3f3f46;
+  --toggle-icon: #e4e4e7;
+  --toggle-hover: #27272a;
+
+  --link-color: #e4e4e7;
+  --link-hover: #ffffff;
+}
+
+/* ── Body ────────────────────────────────────────── */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  width: 300px;
+  padding: 0;
+  transition: background 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Card ────────────────────────────────────────── */
+.popup-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+/* ── Header ─────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-box {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--logo-text);
+  letter-spacing: -0.04em;
+  transition: color 0.3s;
+}
+
+.title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--title);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.plus {
+  color: var(--plus);
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sub);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+/* ── Theme toggle ────────────────────────────────── */
+.theme-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--toggle-bd);
+  background: var(--toggle-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--toggle-icon);
+  transition: all 0.2s ease;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.theme-btn:hover {
+  background: var(--toggle-hover);
+  color: var(--title);
+}
+
+#sun-icon,
+#moon-icon {
+  transition: opacity 0.2s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Divider ─────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--divider);
+  transition: background 0.3s;
+}
+
+/* ── Field Group ─────────────────────────────────── */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.field-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--lbl);
+  transition: color 0.3s;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--field-border);
+  background: var(--field-bg);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.input-wrapper.focused {
+  border-color: var(--field-focus);
+  box-shadow: 0 0 0 2px var(--field-ring);
+}
+
+.key-icon {
+  color: var(--key-idle);
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.input-wrapper.focused .key-icon {
+  color: var(--key-focus);
+}
+
+.icon-divider {
+  width: 1px;
+  height: 16px;
+  background: var(--field-border);
+  margin-left: 2px;
+  margin-right: 2px;
+  transition: background 0.3s;
+}
+
+.input-wrapper.focused .icon-divider {
+  background: var(--key-focus);
+}
+
+.api-input {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--field-text);
+  caret-color: var(--key-focus);
+  transition: color 0.3s;
+}
+
+.api-input:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.api-input::placeholder {
+  color: var(--placeholder);
+  font-weight: 500;
+}
+
+.clear-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--lbl);
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.clear-btn:hover {
+  background: var(--field-ring);
+  color: var(--title);
+}
+
+/* ── Links ───────────────────────────────────────── */
+.get-key-link {
+  font-size: 11px;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 2px;
+  align-self: flex-start;
+  transition: color 0.2s;
+}
+
+.get-key-link:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+/* ── Save Button ─────────────────────────────────── */
+.save-btn {
+  width: 100%;
+  padding: 9px 0;
+  border-radius: 12px;
+  border: none;
+  background: var(--save-bg);
+  color: var(--save-text);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.save-btn:hover {
+  background: var(--save-hover);
+}
+
+.save-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── Status ──────────────────────────────────────── */
+.status-msg {
+  min-height: 14px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.status-msg.ok {
+  color: #467da6;
+}
+
+.status-msg.err {
+  color: #ef4444;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.version {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ver);
+  letter-spacing: 0.02em;
+  transition: color 0.3s;
+}
+
+.github-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--gh-border);
+  background: var(--gh-bg);
+  color: var(--gh-text);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.github-btn:hover {
+  background: var(--gh-hover-bg);
+  color: var(--title);
+  border-color: var(--key-idle);
+}
+
+.ext-icon {
+  opacity: 0.5;
+}
+
+/* ── Focus ring ──────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--field-focus);
+  outline-offset: 1px;
+}
