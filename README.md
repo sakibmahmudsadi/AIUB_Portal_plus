@@ -1,21 +1,14 @@
-<table width="100%">
-  <tr>
-    <td align="left">
-      <img src="AIUBP+ Chromium/icons/white.png" width="60" style="vertical-align: middle;">
-      <h1 style="display: inline; vertical-align: middle; margin-left: 10px;">AIUB Portal+</h1>
-    </td>
-    <td align="right" valign="middle">
-      <a href="https://github.com/sakibmahmudsadi/AIUB_Portal_plus/releases"><img src="https://img.shields.io/badge/version-1.5.0-blue?style=for-the-badge" alt="Version"></a><br>
-      <img src="https://img.shields.io/badge/platform-Chrome%20%7C%20Firefox-orange?style=for-the-badge" alt="Platform">
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="AIUBP+ Chromium/icons/white.png" width="160" alt="AIUB Portal+ Logo">
+</p>
 
+<h1 align="center">AIUB Portal+</h1>
+
+<p align="center">
+  AIUB Portal+ is a minimalist browser extension designed to eliminate the friction of daily portal logins. No more manual captcha solving or clicking "Login" repeatedly.
+</p>
 
 ---
-
-### 🚀 Enhance Your Portal Experience
-**AIUB Portal+** is a minimalist browser extension designed to eliminate the friction of daily portal logins. No more manual captcha solving or clicking "Login" repeatedly.
 
 ### 🌟 Key Features
 - **⚡ Instant Auto-Login:** Logs you in automatically as soon as credentials are ready.
@@ -43,8 +36,8 @@
 3. Go to `chrome://extensions/` and enable **Developer Mode** (top right).
 4. Click **Load unpacked** and select the extracted folder.
 
-#### 🦊 For Firefox
-1. Simply install from the [Official Firefox Add-ons Store](https://addons.mozilla.org/en-US/firefox/addon/aiub_portal_plus/).
+#### 🦊 For Firefox (Under Review)
+1. Install from the [Official Firefox Add-ons Store](https://addons.mozilla.org/en-US/firefox/addon/aiub_portal_plus/).
 
 ---
 
