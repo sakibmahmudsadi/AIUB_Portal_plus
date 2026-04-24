@@ -30,6 +30,8 @@
 
 ### 📥 Installation
 
+📧 **Temporary Mail:** [Link](https://temp-mail.app/)
+
 #### 🌐 For Chromium Browsers (Chrome, Brave, Edge)
 1. **Download** the latest release [here](https://github.com/sakibmahmudsadi/AIUB_Portal_plus/releases).
 2. **Extract** the ZIP file to a folder.
